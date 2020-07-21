@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>SIR</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script src="js/d3.v3.5.6.js"></script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve column">
+        <h4>The SIR Model for Spread of Disease</h4>
+        <ol type = "1" >
+          <p>The SIR model is a simple mathematical model of epidemics. An epidemic is when the number of people infected with a disease is increasing in a population. S, I, and R stand for:
+          <li> S - susceptible. These are people that are not infected with the disease yet. However, they are not immune to it either and so they can become infected with the disease in the future.</li>
+          <li> I - infected or infectious. These are people that are infected with the disease and can transmit the disease to susceptible people.</li>
+          <li>R - recovered. These are people who have recovered from the disease and are immune, so they can no longer be infected with the disease.</li></p>
+        </ol>
+        <p>The SIR model is used where individuals infect each other directly (rather than through a disease vector such as a mosquito).
+          An individual who recovers from the illness is also modeled to have perfect immunity to the disease thereafter.
+          Contact between people is also modeled to be random.</p> 
+        <p>The rate that people become infected is proportional to the number of people who are infected, and the number of people who are susceptible.
+           If there are lots of people infected, the chances of a susceptible coming into contact with someone who is infected is high.
+           Likewise, if there are very few people who are susceptible, the chances of a susceptible coming into contact with an infected is
+           lower (since most of the contact would be between the non-susceptible people--either infected or resistant).</p>
+         <p>The image below shows working of SIR Model</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" >
+    <div class="row">
+      <div class="twelve columns ">
+        <img src="Model.png" alt="SIR Diagram" width="800">
+        <p> This is the graph of population infected with the disease</p>
+        <img src="Graph.png" alt="SIR Graph" width="400">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="twelve column">
+        <h4>SIR Model</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 540.7 929.1" style="enable-background:new 0 0 540.7 929.1;" xml:space="preserve">
+        <style type="text/css">
+        	.st0{fill:#FFFFFF;stroke:#000000;stroke-width:5.6693;stroke-miterlimit:10;}
+        	.st1{fill:none;stroke:#000000;stroke-miterlimit:1;}
+        	.st2{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:1;}
+        	.st3{fill:none;stroke:#000000;stroke-width:2.8346;stroke-linecap:round;stroke-miterlimit:1;}
+        	.st4{font-family:'MyriadPro-Regular';}
+        	.st5{font-size:17.0079px;}
+        </style>
+        <g id="S">
+        	<g id="SusceptibleStock">
+        		<rect id="XMLID_1_" x="5.7" y="22.3" class="stock" width="350" height="200"/>
+        	</g>
+        </g>
+        <g id="I">
+        	<g id="InfectedStock">
+        		<rect id="XMLID_3_" x="5.7" y="336.1" class="stock" width="350" height="200"/>
+        	</g>
+        </g>
+        <g id="R">
+        	<g id="RecoveredStock">
+        		<rect id="XMLID_4_" x="5.7" y="649.9" class="stock" width="350" height="200"/>
+        	</g>
+        </g>
+        </svg>
+      </div>
+      <div class="six columns">
+        <div> <h6> <strong>TOTAL POPULATION</strong></h6> </div>
+        <div id="Population"> </div>
+
+      </div>
+      <div class="six columns">
+        <div> <h6> <strong>INFECTIVITY</strong></h6> </div>
+        <div id="InfectivityRate"> </div>
+      </div>
+      <div class="six columns">
+        <div> <h6> <strong>INFECTIVITY DURATION</strong></h6> </div>
+        <div id="DurationofInfectivity"> </div>
+
+      </div>
+      <div class="six columns">
+        <div> <h6> <strong>CONTACT FREQUENCY</strong></h6> </div>
+        <div id="ContactFreqency"> </div>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="js/sd_library.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
